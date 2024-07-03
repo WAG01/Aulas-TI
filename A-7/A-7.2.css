@@ -1,0 +1,20 @@
+.fundo {
+    background-image: url(../Imagens/A8.png);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+h1 {
+    height: 100px;
+    margin-left: 25px;
+}
+
+p {
+    height: 100px;
+    margin-left: 25px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}

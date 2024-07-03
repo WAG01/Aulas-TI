@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#titulo-principal {
+    color: blue;
+    font-size: 24px;
+    text-align: center;
+}
+
+.destaque {
+    background-color: yellow;
+    padding: 10px;
+    border: 1px solid black;
+}
