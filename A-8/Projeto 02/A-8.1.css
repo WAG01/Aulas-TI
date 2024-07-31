@@ -1,5 +1,39 @@
-/* Formatando a área da barra de navegação */
-ul {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title {
+    border-left: 4px solid #000;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Modelo 01 */
+.container0 li{
+    background-color: #ebeaea;
+}
+
+.container0 li a {
+    display: block;
+    color: #000;    
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+.container0 a:hover {
+    background-color: black;
+    color: white;
+}
+
+.container0 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -7,16 +41,127 @@ ul {
     background-color: #f1f1f1;
 }
 
-/* Formatando os itens da barra de navegação */
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
+/* --------------------------------------------------------------------------- */
+
+/* Modelo 02 */
+.container1 li {
+    background-color: rgb(59, 59, 59);
+    border-left: 8px solid black;
+    border-right: 8px solid #5c5c5c;
+    border-bottom: 1px solid #5c5c5c;
+    padding: 10px 50px;
+}
+
+.container1 li a {
+    color: white;
     text-decoration: none;
 }
 
-/* Formatando os itens da barra de navegação quando passar o mouse */
-ul a:hover {
-    background-color: #121111;
+.container1 li:hover {
+    background-color: black;
+    border-left: 8px solid #5c5c5c;
+    border-bottom: 2px solid #5c5c5c;
+    border-right: 10px solid black;
+}
+
+.container1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Modelo 03 */
+.container2 li {
+    transition: .4s;
+    background-color: rgb(233, 232, 232);
+    border-left: 8px solid darkblue;
+    border-bottom: 1px solid darkblue;
+    padding: 10px 50px;
+}
+
+.container2 li a {
+    color: black;
+    text-decoration: none;
+}
+
+.container2 li:hover {
+    background-color: rgb(147, 147, 252);
+    border-left: 8px solid #d6d4d4;
+    border-bottom: 2px solid #d6d4d4;
+    border-right: 10px solid darkblue;
+    text-align: end;
+}
+
+.container2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Modelo 04 */
+.container3 li {
+    transition: .4s;
+    background-color: #8d3072;
+    border-right: 8px solid #ffa8d9;
+    border-left: 8px solid black;
+    border-bottom: 2px dotted black;
+    border-radius: 30px;
+    padding: 10px 50px;
+}
+
+.container3 li a {
     color: white;
+    text-decoration: none;
+}
+
+.container3 li:hover {
+    background-color: #ffa8d9;
+    border-left: 8px solid #ffa8d9;
+    border-bottom: 1px solid #d6d4d4;
+    border-right: 8px solid black;
+    text-align: end;
+    border-radius: 0 20px;
+}
+
+.container3 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Design do Aluno */
+.container4 li{
+    background-color: #ebeaea;
+}
+
+.container4 li a {
+    display: block;
+    color: #000;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+.container4 a:hover {
+    background-color: black;
+    color: white;
+}
+
+.container4 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
 }

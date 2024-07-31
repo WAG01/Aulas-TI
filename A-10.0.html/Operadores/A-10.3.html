@@ -1,0 +1,14 @@
+<script>
+
+    let funcionario = (prompt('Digite seu nome'))
+    document.write('<b>' + 'Funcionário: </b>' + funcionario + '<br>')
+    let salario = parseFloat(prompt('Digite seu salário'))
+    document.write('<b>' + 'Salário: </b> ' + salario + '<br>')
+    let porcentagem_aumento = parseFloat(prompt('Digite a porcetagem de aumento'))
+    document.write('<b>' + 'Porcentagem do Aumento: </b> ' + salario + '<br>')
+    let aumento = salario / 100 * porcentagem_aumento
+    document.write('<b>' + 'Valor do Aumento: </b> ' + aumento + '<br>')
+
+    document.write('<b>' + 'Novo Salário: </b>' + (salario + aumento))
+
+</script>

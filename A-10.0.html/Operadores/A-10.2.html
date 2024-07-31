@@ -1,0 +1,17 @@
+<script>
+
+    document.write('<font color="darkblue"><b>' + 'Boletim Escolar: </b></font>' + '<br>')
+
+    let aluno = (prompt('Digite seu nome'))
+    document.write('<b>' + 'Aluno: </b>' + aluno + '<br>')
+
+    let portugues = parseFloat(prompt('Digite sua nota em Português'))
+    document.write('<b>' + 'Portugues: </b> ' + portugues + '<br>')
+    let matematica = parseFloat(prompt('Digite sua nota em Matematica'))
+    document.write('<b>' + 'Matematica: </b> ' + matematica + '<br>')
+    let ciencias = parseFloat(prompt('Digite sua nota em Ciencias'))
+    document.write('<b>' + 'Portugues: </b> ' + ciencias + '<br>')
+
+    document.write('<b>' + 'Media: </b>' + (portugues + matematica + ciencias) /3 + '<br>')
+
+</script>
