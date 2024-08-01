@@ -1,0 +1,37 @@
+<script>
+
+    /*
+    Condicional switch
+    Sintaxe:
+    
+    switch (expressão) {
+    case valor1:
+    bloco de código a ser executado se expressão === valor1
+    break;
+    case valor2:
+    bloco de código a ser executado se expressão === valor2
+    break;
+    default:
+    bloco de código a ser executado se expressão não corresponder a nenhum dos valores anteriores
+    }
+    */
+
+    // Exemplo-07: Crie um programa que leia uma cor do farol de transito e exiba no console uma mensagem correspondente ao significado dessa cor.
+
+    let cor = prompt('Digite uma cor do farol de transito');
+   
+    switch (cor) {
+       case 'vermelho':
+           console.log('Pare!');
+           break;
+       case 'amarelo':
+           console.log('Atenção!');
+           break;
+       case 'verde':
+           console.log('Siga!');
+           break;
+       default:
+           console.log('Cor inválida.');
+   }
+
+</script>
