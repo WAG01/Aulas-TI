@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            background-color: rgb(84, 178, 255);
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+
+        let inteiro = parseFloat(prompt('Digite um número Inteiro'))
+
+       if (inteiro % 2 === 0) {
+            console.log('É Par');
+            document.write('<b><table border=1 width=200><tr><td colspan=2>Par ou Impar</b>')
+                document.write('<tr><td width=150>Numero digitado: </td><td>' + inteiro)
+                    document.write('<tr><td width=150>Definição: </td><td>Par' )
+
+        }else {
+            console.log('É Ímpar');
+            
+            document.write('<table border=1 width=200><tr><td colspan=2>Par ou Impar')
+                document.write('<tr><td width=150>Numero digitado: </td><td>' + inteiro)
+                    document.write('<tr><td width=150>Definição: </td><td>Impar' )
+        }
+
+      
+    </script>
+</body>
+</html>

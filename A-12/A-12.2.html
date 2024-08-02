@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let calculadora = prompt('Digita se você quer -, +, *, /')
+        let Valor1 = prompt('Digite o Primeiro Valor')
+        let Valor2 = prompt('Digite o Segundo Valor')
+
+        switch (calculadora) {
+
+            case '-':
+            console.log(Valor1 - Valor2)
+            let menos = Valor1 - Valor2;
+            document.write(Valor1 + '<br>' + Valor2 + '<br>' + calculadora + menos)
+            break;
+
+            case '+':
+            console.log(Valor1 + Valor2)
+            let mais = Valor1 + Valor2;
+            document.write(Valor1 + '<br>' + Valor2 + '<br>' + calculadora + mais)
+            break;
+
+            case '*':
+            console.log(Valor1 * Valor2)
+            let multiplicacao = Valor1 * Valor2;
+            document.write(Valor1 + '<br>' + Valor2 + '<br>' + calculadora + multiplicacao)
+            break;
+            
+            case '/':
+            console.log(Valor1 / Valor2)
+            let divisao = Valor1 / Valor2;
+            document.write(Valor1 + '<br>' + Valor2 + '<br>' + calculadora + divisao)
+            break;
+        }
+    </script>
+</body>
+</html>
