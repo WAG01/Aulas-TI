@@ -1,0 +1,84 @@
+body {
+    border: 0;
+    margin: 0px;
+    background-color: azure;
+}
+
+hr {
+    border: 2px solid blue;
+    max-width: 90vh;
+}
+
+.atividade h1 {
+    color: red;
+    font-size: 22px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 90%
+}
+
+/* CONTAINER */
+.espaco {
+    margin: 50px;
+    max-width: 120vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35vh;
+    background-color: white;
+}
+
+.container {
+    padding: 10px;
+    text-align: center;
+    border: 4px solid black;
+}
+
+.container1 {
+    padding: 25px;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.atividade {
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 5px solid black;
+    align-items: center;
+    height: auto;
+    max-width: 100vh;
+    font-weight: bold;
+}
+
+.atividade h1,
+.atividade p {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 6vh;
+    max-width: 100%;
+}
+
+.atividade a {
+    text-decoration: none;
+    display: block;
+    margin-left: 6vh;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3em;
+}
+
+footer {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 2px solid black;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+}

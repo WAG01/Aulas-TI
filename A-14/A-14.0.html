@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        tr {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="2">Padaria Sr. Joaquim</td>
+        </tr>
+        <tr>
+            <td>Quantidade de pães:</td>
+            <td id="quantidade"></td>
+        </tr>
+        <tr>
+            <td>Promoção da padaria:</td>
+            <td id="promocao"></td>
+        </tr>
+        <tr>
+            <td>Valor unitário:</td>
+            <td id="valorUnitario"></td>
+        </tr>
+        <tr>
+            <td>Valor à pagar:</td>
+            <td id="valorPagar"></td>
+        </tr>
+    </table>
+
+    <script>
+        /*
+        Exemplo-10:
+        A padaria do Sr. Joaquim está com uma promoção, cada pãozinho custa R$ 1,00.Se o cliente comprar acima de 15 pães cada um terá o custo de R$ 0,80, Crie um programa que solicite ao usuário informar quantos pães ele deseja, imprima na página a quantidade de pães, o valor de cada pão, se entrou napromoção da padaria e qual valor a pagar. Conforme Abaixo:
+
+        */
+        let quantidade = prompt('Quantos pães deseja?');
+        quantidade = parseInt(quantidade, 10);
+
+        if (isNaN(quantidade) || quantidade <= 0) {
+            alert('Por favor, insira um número válido de pães.');
+        } else {
+            let valorUnitario = 1.00;
+            let promocao = "Fora do critério";
+
+            if (quantidade >= 15) {
+                valorUnitario = 0.80;
+                promocao = "Aplicar desconto";
+            }
+
+            const valorPagar = (quantidade * valorUnitario).toFixed(2);
+
+            document.getElementById('quantidade').innerText = quantidade;
+            document.getElementById('promocao').innerText = promocao;
+            document.getElementById('valorUnitario').innerText = `R$ ${valorUnitario.toFixed(2)}`;
+            document.getElementById('valorPagar').innerText = `R$ ${valorPagar}`;
+        }
+    </script>
+</body>
+</html>
