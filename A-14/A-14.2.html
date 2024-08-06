@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="borda">
+        <h1 class="cor1">Resultado</h1>
+
+        <p>Pergunta 1: <br>
+            Qual é o melhor usuário de Mangekyou Sharingan? <br>
+            Alternativa correta: <span class="alternativa-certa">Itachi Uchira</span> <br>
+            Sua resposta: <span class="resposta-usuario" id="resposta1"></span> <br>
+        </p>
+        <hr>
+
+        <p>Pergunta 2: <br>
+            Quantas medalhas de Prata atualmente o Brasil tem nas Olimpíadas 2024? <br>
+            Alternativa correta: <span class="alternativa-certa">4 Medalhas</span> <br>
+            Sua resposta: <span class="resposta-usuario" id="resposta2"></span> <br>
+        </p>
+        <hr>
+
+        <p>Pergunta 3: <br>
+            Qual é o único musclecar que ainda não foi transformado em eletrônico atualmente? <br>
+            Alternativa correta: <span class="alternativa-certa">Mustang</span> <br>
+            Sua resposta: <span class="resposta-usuario" id="resposta3"></span> <br>
+        </p>
+        <hr>
+
+        <p>Pergunta 4: <br>
+            No final do filme “Jogador Nº1”, o prêmio foi dividido entre 5 pessoas. Cite um nome correto abaixo. <br>
+            Alternativa correta: <span class="alternativa-certa">Samantha Cook</span> <br>
+            Sua resposta: <span class="resposta-usuario" id="resposta4"></span> <br>
+        </p>
+        <hr>
+
+        <p>Pergunta 5: <br>
+            Qual dos times brasileiros atualmente não tem mundial? <br>
+            Alternativa correta: <span class="alternativa-certa">Palmeiras</span> <br>
+            Sua resposta: <span class="resposta-usuario" id="resposta5"></span> <br>
+        </p>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        // Função para exibir uma pergunta e retornar a pontuação
+        function fazerPergunta(pergunta, alternativaCorreta, idResposta) {
+            let resposta = parseInt(prompt(pergunta));
+            document.getElementById(idResposta).innerText = resposta === alternativaCorreta ? 'Correto' : 'Incorreto';
+            return resposta === alternativaCorreta ? 1 : 0;
+        }
+
+        // Inicializa a pontuação
+        let totalPontos = 0;
+
+        // Primeira Pergunta
+        let p1 = 'Qual é o melhor usuário de Mangekyou Sharingan? \n 1) Uchira Madara \n 2) Naruto Uzumaki \n 3) Sarada Uchira \n 4) Itachi Uchira';
+        totalPontos += fazerPergunta(p1, 4, 'resposta1');
+
+        // Segunda Pergunta
+        let p2 = 'Quantas medalhas de Prata atualmente o Brasil tem nas Olimpíadas 2024? \n 1) 4 Medalhas \n 2) 2 Medalhas \n 3) 8 Medalhas \n 4) 6 Medalhas';
+        totalPontos += fazerPergunta(p2, 1, 'resposta2');
+
+        // Terceira Pergunta
+        let p3 = 'Qual é o único musclecar que ainda não foi transformado em eletrônico atualmente? \n 1) Camaro SS \n 2) LaFerrari \n 3) Mustang \n 4) Lamborghini';
+        totalPontos += fazerPergunta(p3, 3, 'resposta3');
+
+        // Quarta Pergunta
+        let p4 = 'No final do filme “Jogador Nº1”, o prêmio foi dividido entre 5 pessoas. Cite um nome correto abaixo. \n 1) Samantha Cook \n 2) Travis Walton \n 3) Alex Andie \n 4) Laysa Beatriz';
+        totalPontos += fazerPergunta(p4, 1, 'resposta4');
+
+        // Quinta Pergunta
+        let p5 = 'Qual dos times brasileiros atualmente não tem mundial? \n 1) Corinthians \n 2) São Paulo \n 3) Palmeiras \n 4) Internacional';
+        totalPontos += fazerPergunta(p5, 3, 'resposta5');
+
+        // Exibe o resultado final
+        document.getElementById('resultado').innerText = 'Pontos: ' + totalPontos + '/5';
+    </script>
+</body>
+</html>
