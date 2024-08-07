@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        1. Crie um programa que armazene a senha Senac
+        2. Solicite ao usuario que digite a senha correta
+        3. Enquanto a senha digitada pelo usuario não for senac, o programa deverá continuar em execução solicitando a senha correta
+        */
+
+        let senha = 'Senac';
+        let senhaDigitada = prompt('Digite a senha correta');
+
+        while(senhaDigitada !== senha) {
+            alert('Senha Incorreta, tente novamente!');
+            senhaDigitada = prompt('Digite a senha novamente');
+
+            document.write('<h1>Acesso Permitido</h1>');
+        }
+    </script>
+</body>
+</html>
