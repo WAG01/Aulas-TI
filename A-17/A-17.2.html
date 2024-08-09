@@ -1,0 +1,42 @@
+<style>
+    h1{
+        background-color: black;
+        color: white;
+        font-size: 36px;
+        text-align: center;
+    }
+</style>
+
+<script>
+
+let data = new Date();
+let dia = data.getDate();
+let diaSemana = data.getDay();
+let mes = data.getMonth() +1;
+let ano = data.getFullYear();
+ 
+let ds;
+if(diaSemana === 0){ds = 'Domingo'}
+else if(diaSemana === 1){ds = 'Segunda-feira'}
+else if(diaSemana === 2){ds = 'Terça-feira'}
+else if(diaSemana === 3){ds = 'Quarta-feira'}
+else if(diaSemana === 4){ds = 'Quinta-feira'}
+else if(diaSemana === 5){ds = 'Sexta-feira'}
+else if(diaSemana === 6){ds = 'Sabado-feira'}
+
+let mesAno;
+if(mes === 1)(mesAno = 'Janeiro');
+else if (mes === 2){mesAno = 'Fevereiro'}
+else if (mes === 3){mesAno = 'Março'}
+else if (mes === 4){mesAno = 'Abril'}
+else if (mes === 5){mesAno = 'Maio'}
+else if (mes === 6){mesAno = 'Junho'}
+else if (mes === 7){mesAno = 'Julho'}
+else if (mes === 8){mesAno = 'Agosto'}
+
+let dataCompleta = ds + ' ' +  dia + ' de ' + mesAno + ' de ' + ano;
+ 
+console.log(dataCompleta);
+document.write('<h1>' + dataCompleta + '</h1>');
+ 
+</script>

@@ -1,0 +1,13 @@
+<style>
+    h1 {
+        background-color: aqua;
+        font-size: 25px;
+    }
+</style>
+<script>
+    let data = new Date();
+
+    if(data  < 10){data = '0' + data};
+    console.log('<h1>' + data.getDate() + '/' + (data.getMonth() +1) + '/' + (data.getFullYear()) + '<h1>');
+    document.write('<h1>' + data.getDate() + '/' + (data.getMonth() +1) + '/' + (data.getFullYear()) + '<h1>')
+</script>
