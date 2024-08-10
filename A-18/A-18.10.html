@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+    <style>
+        /* Adicione aqui seu estilo se necessário */
+    </style>
+</head>
+<body>
+    <img id="lampada" src="../Imagens/desligadaa.png" alt="Lâmpada">
+
+    <form id="lampForm">
+        <label>
+            <input type="radio" name="choice" value="ligar">
+            Ligar
+        </label><br>
+        <label>
+            <input type="radio" name="choice" value="desligar">
+            Desligar
+        </label>
+    </form>
+    
+    <script>
+        function ligar() {
+            document.getElementById("lampada").src = "../Imagens/ligada.png";
+        }
+
+        function desligar() {
+            document.getElementById("lampada").src = "../Imagens/desligadaa.png";
+        }
+
+        document.querySelectorAll('input[name="choice"]').forEach((elem) => {
+            elem.addEventListener('change', (event) => {
+                const value = event.target.value;
+                if (value === "ligar") {
+                    ligar();
+                } else if (value === "desligar") {
+                    desligar();
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

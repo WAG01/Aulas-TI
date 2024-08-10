@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <style>
+        #box{
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            margin-left: 150px;
+        }
+ 
+    </style>
+ 
+<script>
+ 
+    function acao(){
+       let div = document.getElementById('box');
+       div.style.width = '500px';
+       div.style.height = '500px';
+       div.style.backgroundColor = 'red';
+    }
+ 
+    </script>
+<div id="box" onmouseover="acao();"></div>
+
+</body>
+</html>
