@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+    // Criar uma lista diamica
+    // Cria um novo elemento de lista não ordenada <ul>
+    
+    let lista = document.createElement("ul");
+    
+    // Cria 3 itens de lista <li>
+    
+    for (let i = 1; i <= 30; i++) {
+    
+    // Cria um novo item de lista <li>
+    let item = document.createElement("li");
+    
+    // Define o texto do item de lista
+    item.textContent = "Item " + i;
+    
+    // Adiciona o item à lista <ul>
+    lista.appendChild(item);
+    }
+    
+    // Adiciona a lista <ul> ao final do <body>
+    document.body.appendChild(lista);
+    </script>
+     
+
+</body>
+</html>

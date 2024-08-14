@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+
+        body {
+            margin: 0;
+            border: 0;
+            text-align: center;
+        }
+
+        td {
+            border: 2px solid black;
+            width: 150px;
+        }
+
+        #nome {
+            color: black;
+        }
+
+        #email {
+            color: black;
+        }
+
+        #telefone {
+            color: black;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+    </style>
+
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td id="email"></td>
+        </tr>
+        <tr>
+            <td>Telefone:</td>
+            <td id="telefone"></td>
+        </tr>
+    </table>
+
+    <div>
+        <button onclick="window.print()">Imprimir</button>
+    </div>
+    
+    <script>
+        let nome = document.getElementById('nome')
+        nome.textContent = prompt("Digite seu nome")
+
+        let email = document.getElementById('email')
+        email.textContent = prompt("Digite seu E-mail")
+        
+        let telefone = document.getElementById('telefone')
+        telefone.textContent = prompt("Digite seu Telefone")
+    </script>
+</body>
+</html>

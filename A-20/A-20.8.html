@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Cria uma nova tabela <table>
+        let tabela = document.createElement("table");
+         
+        // Define uma borda para a tabela
+        tabela.border = 1;
+        
+        // Cria 3 linhas para a tabela
+        for (let i = 0; i < 3; i++) {
+         
+        // Cria uma nova linha <tr>
+        let linha = document.createElement("tr");
+
+        // Cria 3 células para cada linha
+        for (let j = 0; j < 3; j++) {
+
+        // Cria uma nova célula <td>
+        let celula = document.createElement("td");
+
+        // Define o texto da célula
+        celula.textContent = "Linha " + (i + 1) + ", Coluna " + (j + 1);
+
+        // Adiciona a célula à linha
+        linha.appendChild(celula);
+        }
+         
+        // Adiciona a linha à tabela
+        tabela.appendChild(linha);
+        }
+         
+        // Adiciona a tabela ao final do <body>
+        document.body.appendChild(tabela);
+        </script>
+</body>
+</html>
