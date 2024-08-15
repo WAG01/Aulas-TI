@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio 0</title>
+    <link rel="stylesheet" href="../A-21/A-21.0.css">
+</head>
+<center>
+
+    <body>
+        <div id="relogio0">
+            <div id="display0">
+                <div id="horas"></div>
+            </div>
+            <p>:</p>
+            <div id="display0" id="display1">
+                <div id="minutos"></div>
+            </div>
+            <p>:</p>
+            <div id="display0">
+                <div id="segundos"></div>
+            </div>
+        </div>
+
+
+        <script>
+            const horas = document.getElementById('horas');
+            const minutos = document.getElementById('minutos')
+            const segundos = document.getElementById('segundos')
+
+            // Aplicando o intervalo para o relogio funcionar
+            const relogio = setInterval(function time() {
+
+                let tempo = new Date();
+                let h = tempo.getHours();
+                let m = tempo.getMinutes();
+                let s = tempo.getSeconds();
+
+                if (h < 10) h = '0' + h;
+                if (m < 10) m = '0' + m;
+                if (s < 10) s = '0' + s;
+
+                horas.textContent = h;
+                minutos.textContent = m;
+                segundos.textContent = s;
+            })
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio 3</title>
+    <link rel="stylesheet" href="../A-21/A-21.3.css">
+</head>
+
+<body>
+
+    <center>
+        <div id="relogio3">
+            <div id="data-completa">
+                <h1 id="data"></h1>
+            </div>
+            <div id="display-container">
+                <div id="display">
+                    <div id="horas"></div>
+                </div>
+                <p>:</p>
+                <div id="display">
+                    <div id="minutos"></div>
+                </div>
+                <p>:</p>
+                <div id="display">
+                    <div id="segundos"></div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        // RELOGIO
+        const horas = document.getElementById('horas');
+        const minutos = document.getElementById('minutos');
+        const segundos = document.getElementById('segundos');
+
+        function atualizarRelogio() {
+            let tempo = new Date();
+            let h = tempo.getHours();
+            let m = tempo.getMinutes();
+            let s = tempo.getSeconds();
+
+            if (h < 10) h = '0' + h;
+            if (m < 10) m = '0' + m;
+            if (s < 10) s = '0' + s;
+
+            horas.textContent = h;
+            minutos.textContent = m;
+            segundos.textContent = s;
+        }
+
+        setInterval(atualizarRelogio, 1000);
+        atualizarRelogio(); // Atualiza o relógio imediatamente ao carregar
+
+        // DATA COMPLETA
+        function atualizarData() {
+            let data = new Date();
+            let dia = data.getDate();
+            let diaSemana = data.getDay();
+            let mes = data.getMonth() + 1;
+            let ano = data.getFullYear();
+
+            let ds;
+            switch (diaSemana) {
+                case 0: ds = 'Domingo'; break;
+                case 1: ds = 'Segunda-feira'; break;
+                case 2: ds = 'Terça-feira'; break;
+                case 3: ds = 'Quarta-feira'; break;
+                case 4: ds = 'Quinta-feira'; break;
+                case 5: ds = 'Sexta-feira'; break;
+                case 6: ds = 'Sábado'; break;
+            }
+
+            let mesAno;
+            switch (mes) {
+                case 1: mesAno = 'Janeiro'; break;
+                case 2: mesAno = 'Fevereiro'; break;
+                case 3: mesAno = 'Março'; break;
+                case 4: mesAno = 'Abril'; break;
+                case 5: mesAno = 'Maio'; break;
+                case 6: mesAno = 'Junho'; break;
+                case 7: mesAno = 'Julho'; break;
+                case 8: mesAno = 'Agosto'; break;
+                case 9: mesAno = 'Setembro'; break;
+                case 10: mesAno = 'Outubro'; break;
+                case 11: mesAno = 'Novembro'; break;
+                case 12: mesAno = 'Dezembro'; break;
+            }
+
+            let dataCompleta = ds + ', ' + dia + ' de ' + mesAno + ' de ' + ano;
+            document.getElementById('data').textContent = dataCompleta;
+        }
+
+        atualizarData(); // Atualiza a data imediatamente ao carregar
+    </script>
+
+</body>
+
+</html>
