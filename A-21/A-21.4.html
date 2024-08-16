@@ -1,100 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relógio 0 - 3</title>
+    <title>Relógio 4</title>
     <link rel="stylesheet" href="../A-21/A-21.0.css">
-    <link rel="stylesheet" href="../A-21/A-21.1.css">
-    <link rel="stylesheet" href="../A-21/A-21.2.css">
-    <link rel="stylesheet" href="../A-21/A-21.3.css">
 </head>
+
 <body>
+
     <center>
-    <h1>Relógio: 00</h1><br>
-    <div id="relogio0">
-        <div id="display0">
-            <div id="horas0"></div>
-        </div>
-        <p>:</p>
-        <div id="display0" id="display1">
-            <div id="minutos0"></div>
-        </div>
-        <p>:</p>
-        <div id="display0">
-            <div id="segundos0"></div>
-        </div>
-    </div>
-
-    <br><br>
-
-    <h1>Relógio: 01</h1><br>
-    <div id="relogio1">
-        <div id="display1">
-            <div id="horas1"></div>
-        </div>
-        <p>:</p>
-        <div id="display1">
-            <div id="minutos1"></div>
-        </div>
-        <p>:</p>
-        <div id="display1">
-            <div id="segundos1"></div>
-        </div>
-    </div>
-
-    <br><br>
-
-    <h1>Relógio: 02</h1><br>
-    <div id="relogio2">
-        <div id="data-completa">
-            <h1 id="data"></h1>
-        </div>
-        <div id="display-container">
-            <div id="display">
-                <div id="horas2"></div>
+        <div id="relogio4">
+            <div id="data-completa">
+                <h1 id="data"></h1>
             </div>
-            <p>:</p>
-            <div id="display">
-                <div id="minutos2"></div>
-            </div>
-            <p>:</p>
-            <div id="display">
-                <div id="segundos2"></div>
+            <div id="display-container">
+                <div id="display4">
+                    <div id="horas"></div>
+                </div>
+                <p>:</p>
+                <div id="display4">
+                    <div id="minutos"></div>
+                </div>
+                <p>:</p>
+                <div id="display4">
+                    <div id="segundos"></div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <br><br>
-
-    <h1>Relógio: 03</h1><br>
-    <div id="relogio3">
-        <div id="data-completa">
-            <h1 id="data"></h1>
-        </div>
-        <div id="display-container">
-            <div id="display">
-                <div id="horas3"></div>
-            </div>
-            <p>:</p>
-            <div id="display">
-                <div id="minutos3"></div>
-            </div>
-            <p>:</p>
-            <div id="display">
-                <div id="segundos3"></div>
-            </div>
-        </div>
-    </div>
+    </center>
 
     <script>
+        // RELOGIO
         const horas = document.getElementById('horas');
-        const minutos = document.getElementById('minutos')
-        const segundos = document.getElementById('segundos')
+        const minutos = document.getElementById('minutos');
+        const segundos = document.getElementById('segundos');
 
-        // Aplicando o intervalo para o relogio funcionar
-        const relogio = setInterval(function time() {
-
+        function atualizarRelogio() {
             let tempo = new Date();
             let h = tempo.getHours();
             let m = tempo.getMinutes();
@@ -104,22 +47,10 @@
             if (m < 10) m = '0' + m;
             if (s < 10) s = '0' + s;
 
-            horas0.textContent = h;
-            minutos0.textContent = m;
-            segundos0.textContent = s;
-
-            horas1.textContent = h;
-            minutos1.textContent = m;
-            segundos1.textContent = s;
-
-            horas2.textContent = h;
-            minutos2.textContent = m;
-            segundos2.textContent = s;
-
-            horas3.textContent = h;
-            minutos3.textContent = m;
-            segundos3.textContent = s;
-        })
+            horas.textContent = h;
+            minutos.textContent = m;
+            segundos.textContent = s;
+        }
 
         setInterval(atualizarRelogio, 1000);
         atualizarRelogio(); // Atualiza o relógio imediatamente ao carregar
@@ -162,8 +93,10 @@
             let dataCompleta = ds + ', ' + dia + ' de ' + mesAno + ' de ' + ano;
             document.getElementById('data').textContent = dataCompleta;
         }
-        
+
+        atualizarData(); // Atualiza a data imediatamente ao carregar
     </script>
-    </center>
+
 </body>
+
 </html>
