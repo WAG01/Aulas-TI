@@ -4,32 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="A-22.0.css">
+    <title>Cadastro</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+        }
+
+        .borda {
+            background-color: azure;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .field {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            border: 1px solid black;
+            border-radius: 2px;
+            background-color: azure;
+            margin: 5px 0;
+            height: 35px;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .cadastrar {
+            background-color: green;
+            border: none;
+            border-radius: 2px;
+            height: 35px;
+            width: 100%;
+            margin-top: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .cadastrar:hover {
+            background-color: darkgreen;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="center">
+    <div class="borda">
+        <h1>Cadastro</h1>
         <form>
-            <div class="borda">
-                <div>
-                    <h1>Cadastro</h1>
-                </div>
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="nome" id="nome">
-                </div>
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email">
-                </div>
-                <div>
-                    <label for="senha" class="label">Senha:</label>
-                    <input type="senha" id="senha">
-                </div>
-                <div>
-                    <button class="cadastrar">Cadastrar</button>
-                </div>
+            <div class="field">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="field">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div>
+                <button type="submit" class="cadastrar">Cadastrar</button>
             </div>
         </form>
     </div>

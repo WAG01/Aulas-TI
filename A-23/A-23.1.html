@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Eventos de Teclado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <br>
+
+    <div>
+        <p>Pressione as teclas numéricas para mudar a cor e o tamanho da caixa:</p>
+    </div>
+
+    <script>
+        const box = document.getElementById('box');
+
+        function handleKeyPress(event) {
+            const key = event.key;
+
+            switch (key) {
+                case '0':
+                    box.style.backgroundColor = 'lightgray';
+                    box.style.width = '200px';
+                    box.style.height = '200px';
+                    break;
+                case '1':
+                    box.style.backgroundColor = 'red';
+                    break;
+                case '2':
+                    box.style.backgroundColor = 'green';
+                    break;
+                case '3':
+                    box.style.backgroundColor = 'blue';
+                    break;
+                case '4':
+                    box.style.backgroundColor = 'yellow';
+                    break;
+                case '5':
+                    box.style.width = '150px';
+                    box.style.height = '150px';
+                    break;
+                case '6':
+                    box.style.width = '250px';
+                    box.style.height = '250px';
+                    break;
+                case '7':
+                    box.style.width = '300px';
+                    box.style.height = '300px';
+                    break;
+                case '8':
+                    box.style.width = '350px';
+                    box.style.height = '350px';
+                    break;
+                case '9':
+                    box.style.width = '400px';
+                    box.style.height = '400px';
+                    break;
+                default:
+                    // No action for keys other than 0-9
+                    break;
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyPress);
+    </script>
+
+</body>
+</html>
