@@ -37,16 +37,16 @@ h1 {
     padding: 5px;
     text-align: center;
     border: 4px solid black;
+    background-color: beige;
     border-radius: 50px;
-    background-color: burlywood;
 }
 
 .container1 {
     padding: 5px;
     border-right: 4px solid black;
     border-left: 4px solid black;
-    border-radius: 50px;
     background-color: darkgray;
+    border-radius: 50px;
 }
 
 .atividade {
@@ -92,6 +92,6 @@ footer {
     border-right: 4px solid black;
     border-left: 4px solid black;
     border-bottom: 4px solid black;
+    background-color: beige;
     border-radius: 50px;
-    background-color: burlywood;
 }
