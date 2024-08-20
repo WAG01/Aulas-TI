@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src="../A-22/A-22.1.js"></script>
     <style>
         /* Definições gerais de estilo */
         body {
@@ -108,23 +109,24 @@
 <body>
     <div class="container">
         <h1>Formulário de Login</h1>
-        <form>
+        <form onsubmit="return validarFormulario()">
             <div class="login-container">
                 <div>
                     <img src="../Imagens/BOB.jpeg" alt="foto" class="img">
                 </div>
                 <div class="field">
                     <label for="usuario">Usuário</label>
-                    <input type="text" id="usuario" name="usuario" required>
+                    <input type="text" id="usuario" name="usuario">
                 </div>
                 <div class="field">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required>
+                    <input type="password" id="senha" name="senha">
                 </div>
                 <div>
                     <button type="submit" class="login-button">Login</button>
                 </div>
                 <div>
+                    <div id="mensagemErro"></div>
                     <label>
                         <input type="checkbox" name="salva">
                         Salvar dados
@@ -136,6 +138,7 @@
                 </div>
             </div>
         </form>
+
     </div>
 </body>
 
