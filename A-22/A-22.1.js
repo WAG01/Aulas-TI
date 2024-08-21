@@ -1,5 +1,5 @@
 function validarFormulario() {
-    const nome = document.getElementById("usuario").value;
+    const usuario = document.getElementById("usuario").value;
     const senha = document.getElementById("senha").value;
     const mensagemErro = document.getElementById("mensagemErro");
 
